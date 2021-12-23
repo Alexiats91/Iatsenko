@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="img/favicon.png" />
+    <title>Iatsenko HW8</title>
+  </head>
+
+  <body>
+    <h1>Iatsenko Oleksandr. Homework 8</h1>
+    <hr />
+    <h2>Таблица 1</h2>
+    <table width="100%" border="2">
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Имя</th>
+          <th>Присутсвие</th>
+          <th>Оценка</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <th>№</th>
+          <th>Имя</th>
+          <th>Присутсвие</th>
+          <th>Оценка</th>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td colspan="2">Александр</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Сергей</td>
+          <td>+</td>
+          <td rowspan="2">8</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Марина</td>
+          <td>+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <h2>Таблица 2</h2>
+    <table width="100%">
+      <thead>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <td><img width="100" src="img/lvov.jpg" /></td>
+          <td><img width="100" src="img/lvov.jpg" /></td>
+          <td><img width="100" src="img/lvov.jpg" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <h2>ФОРМА</h2>
+    <form>
+      <fieldset>
+        <legend>Персональная информация</legend>
+        <div>
+          <input required type="text" name="first_name" placeholder="Имя *" />
+        </div>
+        <div>
+          <input
+            required
+            type="text"
+            name="last_name"
+            placeholder="Фамилия *"
+          />
+        </div>
+        <div>
+          <input required type="text" name="age" placeholder="Возраст *" />
+        </div>
+      </fieldset>
+      <button type="submit">Отправить</button>
+    </form>
+  </body>
+</html>
