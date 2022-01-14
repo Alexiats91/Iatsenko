@@ -11,14 +11,12 @@
 }
 .wrap {
     box-sizing: border-box;
-    height: 899px;
     width: 100%;
     background: url(../images/bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    flex: 1;
-    
-    }
+    padding-bottom: 313px;
+}
 .content{
     padding-top: 310px;
     text-align: center;
@@ -69,7 +67,7 @@ option{
 input[type=date]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
-input[type=submit]:active {
+button:active {
     background-color: #124da5;
     margin:  5px 27px;
     width: 320px;
