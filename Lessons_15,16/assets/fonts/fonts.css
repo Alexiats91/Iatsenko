@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'Segoe UI Semi Bold';
+	src: url('SegoeUI-SemiBold.eot');
+	src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+		url('SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('SegoeUI-SemiBold.woff') format('woff'),
+		url('SegoeUI-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Segoe UI Regular';
+	src: url('SegoeUI.eot');
+	src: local('Segoe UI'), local('SegoeUI'),
+		url('SegoeUI.eot?#iefix') format('embedded-opentype'),
+		url('SegoeUI.woff') format('woff'),
+		url('SegoeUI.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Segoe UI Black';
+	src: url('fonts/seguibl.eot');
+	src: url('fonts/seguibl.eot') format('embedded-opentype'),
+	url('fonts/seguibl.woff2') format('woff2'),
+	url('fonts/seguibl.woff') format('woff'),
+	url('fonts/seguibl.ttf') format('truetype'),
+	url('fonts/seguibl.svg#seguibl') format('svg');
+}
+
+@font-face {
+	font-family: 'Roboto Medium';
+	src: url('roboto-medium-webfont.woff2') format('woff2'),
+	url('roboto-medium-webfont.woff') format('woff'),
+	url('roboto-medium-webfont.svg#robotomedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto Regular';
+	src: url('roboto-regular-webfont.woff2') format('woff2'),
+	url('roboto-regular-webfont.woff') format('woff'),
+	url('roboto-regular-webfont.svg#robotoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
