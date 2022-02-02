@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.background{
+    position: relative;
+    width: 1024px;
+    height:640px;
+    margin: 0 auto;
+    background: url(../img/sky.jpg) no-repeat top center;
+    background-size: cover;
+    overflow: hidden;
+}
+.gross{
+    position: absolute;
+    background: url(../img/gross.png) repeat-x;
+    top: 541px;
+    background-position: bottom;
+    height:100px;
+    width: 1024px;
+    background-size: contain;
+}
+.background span {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background: url(../img/ball.png) no-repeat center center;
+    background-size: contain;
+    animation: ball 3s linear forwards infinite;
+}
+@keyframes ball {
+    0% {
+        top: 30px;
+        left: -100px;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: calc(100% - 100px);
+        left: 50%;
+        transform: rotate(-180deg);
+    }
+    100%{
+        top: calc(100% - 100px);
+        left: 100%;
+        transform: rotate(270deg);
+    }
+}
