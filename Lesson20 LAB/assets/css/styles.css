@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px black;
+}
+.logo,
+.tel,
+.login {
+    text-align: center;
+    width: 150px;
+    border: solid 1px black;
+}
+.main{
+    display: flex;
+    border: solid 1px black;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    border: solid 1px black;
+}
+.sidebar{
+    width: 25%;
+    border: solid 1px black;
+}
