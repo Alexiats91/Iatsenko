@@ -1,0 +1,117 @@
+/* Generel */
+* {
+    padding: 0;
+    margin: 0;
+    
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Generel */
+
+/* Body */
+.page{
+    background: url(../img/background.png) no-repeat center ;
+    background-size: cover;
+}
+.subtitle{
+    text-align: center;
+    font-family: 'Overpass Extrabold';
+    color: #c04ae2;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 105px;
+    padding-bottom: 25px;
+    letter-spacing: 5px;
+}
+.title{
+    text-align: center;
+    font-family: 'Overpass Extrabold';
+    color: #111111; 
+    font-size: 28px;
+    max-width: 740px; 
+    margin: 0 auto;
+    padding-bottom: 110px;
+}
+.section{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 90px;
+}
+.section__picture{
+    width: 50%;
+    max-width: 470px;
+}
+.section__description{
+    width: 50%;
+    max-width: 470px;
+}
+.second__section{
+    flex-direction: row-reverse;
+}
+.link__bottom{
+    text-align: center;
+    padding-bottom: 200px;      
+}
+.link__bottom a{
+    text-decoration: none ;
+    font-family: 'Overpass Extrabold';
+    font-size: 18px;
+    color: #111111;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c04ae2;
+}
+.section__button{
+    width: 200px;
+    height: 60px;
+    font-family: 'Overpass Extrabold';
+    font-size: 18px;
+    color: #111111;
+    border: solid 2px #c04ae2;
+    border-radius: 7px;
+    background-color: rgba(192, 74, 226, 0);
+    text-align: center;
+    cursor: pointer;
+
+}
+.section__name{
+    padding-top: 50px;
+    font-family: 'Overpass Extrabold';
+    font-size: 22px;
+}
+.section__title{
+    padding-top: 5px;
+    font-family: 'Overpass Extrabold';
+    font-size: 30px;
+}
+.section__content{
+    padding-top: 25px;
+    padding-bottom: 55px;
+    color: #5e5858;
+    font-family: 'Roboto Regular';
+    font-size: 20px;
+} 
+.first__sec__name{
+    color: #fe6686;
+} 
+.second__sec__name{
+    color: #54d6a1;
+}
+.third__sec__name{
+    color: #fe9a3f; 
+}
+/* Body */
+
+/* Extra */
+.container{
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+/* Extra */
+
+/* Fonts * /
+    font-family: 'Roboto Regular';
+    font-family: 'Overpass Extrabold';
+/* Fonts */
