@@ -1,0 +1,97 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.bg{
+  background: url("../img/bg.jpg");
+  background-size: cover repeat center;
+}
+.title{
+    h1{
+      font-size: 60px;
+      font-family: 'latolight';
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 200px;
+      padding-bottom: 35px;
+    }
+    p{
+      font-size: 14px;
+      font-family: "Lato";
+      color: rgb(230, 209, 227);
+      text-align: center;
+      padding-bottom: 60px;
+    }
+}
+.meet {
+  text-align: center;
+  padding-bottom: 25px;
+  text{
+    font-size: 25px;
+    font-family: 'latoblack';
+    color: #FFFFFFFF;
+    text-transform: uppercase;
+  }
+}
+.all_cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 112px;
+  .cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    background-color: rgba(77, 63, 75, 0.5);
+    width: 260px;
+    height: 380px;
+    min-width: 260px;
+    margin: 5px;
+    .img{
+      background: url("../img/unselected_foto.png");
+      width: 164px;
+      height: 164px;
+      margin-top: 43px;
+      margin-bottom: 27px;
+    }
+    h2{
+      font-size: 25px;
+      font-family: 'latoblack';
+      color: rgb(199, 182, 197);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h4{
+      font-size: 14px;
+      font-family: 'latoregular';
+      color: #A1CA6CFF;
+    }
+  }
+  .cards:hover{
+    background-color: rgba(77, 63, 75, 0.8);
+    cursor: pointer;
+    .img{
+      background: url("../img/selected_foto.png");
+    }
+    h2{
+      color: #ffffff;
+    }
+    h4{
+      color: #ff8973;
+    }
+  }
+}
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px 0px;
+}
+//font-family: 'latoblack';
+//font-family: 'latolight';
+//font-family: 'latoregular';
