@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.page{
+    background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+}
+.fs_pricing{
+    font-size: 24px;
+}
+.title{
+    max-width: 700px;
+}
+.title h1{
+    font-size: 56px;
+}
+.title p{
+    font-size: 20px;
+}
+.table_title{
+    font-size: 40px;
+}
+.my_check{
+    font-size: 20px;
+}
+.fs_foot_logo{
+    font-size: 14px;
+}
