@@ -1,48 +1,48 @@
 function calcRectangleArea(sideAB, sideBC) {
 	sideAB = +prompt( "Введите первую сторону прямоугольника", 0 );
 	sideBC = +prompt( "Введите вторую сторону прямоугольника", 0 );
+	let div = document.querySelector('.result');
 	if( isNaN( sideAB ) || isNaN( sideBC ) ) {
-		console.error( "Вы ввели некорректное значение." );
+		div.innerHTML += `<p>Вы ввели некорректное значение.</p>`;
 	} else if( sideAB < 0 || sideBC < 0 ) {
-		console.error( "Вы ввели отрицательное значение или ноль." );
+		div.innerHTML += `<p>Вы ввели отрицательное значение или ноль.</p>`;
 	} else if( sideAB === 0 || sideBC === 0 ) {
-		console.error( "Вы не ввели значение." );
+		div.innerHTML += `<p>Вы не ввели значение.</p>`;
 	}else {
 		let S = sideAB * sideBC;
-		let div = document.querySelector('.rectangle');
-		div.innerHTML = `Площадь прямоугольника со сторонами ${sideAB}см и ${sideBC}см равна ${S}кв.см.`;
+		div.innerHTML += `<p>Площадь прямоугольника со сторонами ${sideAB} см и ${sideBC} см равна <b>${S} кв.см.</b></p>`;
 	}
 }
 
 function calcCircleArea(r){
 	r = +prompt("Введите радиус круга", 0);
+	let div = document.querySelector('.result');
 	if(isNaN(r)){
-		console.error( "Вы ввели некорректное значение." );
+		div.innerHTML += `<p>Вы ввели некорректное значение.</p>`;
 	} else if(r < 0) {
-		console.error( "Вы ввели отрицательное значение или ноль." );
+		div.innerHTML += `<p>Вы ввели отрицательное значение или ноль.</p>`;
 	} else if(r === 0) {
-		console.error( "Вы не ввели значение." );
+		div.innerHTML += `<p>Вы не ввели значение.</p>`;
 	}else {
 		let S = Math.PI*Math.pow(r, 2);
 		let roundedS = S.toFixed(2);
-		let div = document.querySelector('.circle');
-		div.innerHTML = `Площадь круга с радиусом ${r}см равна ${roundedS}кв.см.`;
+		div.innerHTML += `<p>Площадь круга с радиусом ${r}см равна <b>${roundedS} кв.см.</b></p>`;
 	}
 }
 
 function calcPowNumber(a, n){
 	a = +prompt("Введите число, которое нужно возвести в степень", 0);
 	n = +prompt("Введите степень числа", 0);
+	let div = document.querySelector('.result');
 	if(isNaN(a) || isNaN(n)){
-		console.error( "Вы ввели некорректное значение." );
+		div.innerHTML += `<p>Вы ввели некорректное значение.</p>`;
 	} else if(a < 0 || n < 0) {
-		console.error( "Вы ввели отрицательное значение или ноль." );
+		div.innerHTML += `<p>Вы ввели отрицательное значение или ноль.</p>`;
 	} else if(a === 0 || n === 0) {
-		console.error( "Вы не ввели значение." );
+		div.innerHTML += `<p>Вы не ввели значение.</p>`;
 	}else {
 		let pow = Math.pow(a, n);
-		let div = document.querySelector('.pow');
-		div.innerHTML = `Число ${a} в степени ${n} равно ${pow}.`;
+		div.innerHTML += `<p>Число ${a} в степени ${n} равно <b>${pow}</b>.</p>`;
 	}
 }
 
@@ -55,6 +55,7 @@ button2.addEventListener("click", calcCircleArea);
 let button3 = document.querySelector('#pn');
 button3.addEventListener("click", calcPowNumber);
 
+//****************************************************
 
 let sideAB = 7;
 let sideBC = 3;
