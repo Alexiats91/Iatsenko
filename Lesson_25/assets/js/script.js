@@ -9,7 +9,8 @@ function calcRectangleArea(sideAB, sideBC) {
 		console.error( "Вы не ввели значение." );
 	}else {
 		let S = sideAB * sideBC;
-		console.log( `Площадь прямоугольника со сторонами ${sideAB}см и ${sideBC}см равна ${S}кв.см.` );
+		let div = document.querySelector('.rectangle');
+		div.innerHTML = `Площадь прямоугольника со сторонами ${sideAB}см и ${sideBC}см равна ${S}кв.см.`;
 	}
 }
 
@@ -24,7 +25,8 @@ function calcCircleArea(r){
 	}else {
 		let S = Math.PI*Math.pow(r, 2);
 		let roundedS = S.toFixed(2);
-		console.log( `Площадь круга с радиусом ${r}см равна ${roundedS}кв.см.` );
+		let div = document.querySelector('.circle');
+		div.innerHTML = `Площадь круга с радиусом ${r}см равна ${roundedS}кв.см.`;
 	}
 }
 
@@ -39,18 +41,20 @@ function calcPowNumber(a, n){
 		console.error( "Вы не ввели значение." );
 	}else {
 		let pow = Math.pow(a, n);
-		console.log( `Число ${a} в степени ${n} равно ${pow}.` );
+		let div = document.querySelector('.pow');
+		div.innerHTML = `Число ${a} в степени ${n} равно ${pow}.`;
 	}
 }
 
-console.log(`--------Function--------`);
+let button1 = document.querySelector('#ra');
+button1.addEventListener("click", calcRectangleArea);
 
-calcRectangleArea();
-calcCircleArea();
-calcPowNumber();
+let button2 = document.querySelector('#ca');
+button2.addEventListener("click", calcCircleArea);
 
-console.log(``);
-console.log(`--------Variables--------`);
+let button3 = document.querySelector('#pn');
+button3.addEventListener("click", calcPowNumber);
+
 
 let sideAB = 7;
 let sideBC = 3;
