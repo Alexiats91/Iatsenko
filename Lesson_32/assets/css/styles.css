@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cars{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card {
+    padding: 5px;
+    margin: 10px;
+    width: 350px;
+    border: 2px solid grey;
+    background-color: lightgray;
+}
+.card img{
+    width: 100%;
+}
+.container{
+    max-width: 76%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
