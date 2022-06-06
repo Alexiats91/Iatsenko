@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'FuturaPTMediumOblique';
+    src: url('FuturaPT-MediumObl.woff2') format('woff2'),
+         url('FuturaPT-MediumObl.woff') format('woff'),
+         url('FuturaPT-MediumObl.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'FuturaPTExtraOblique';
+    src: url('FuturaPT-ExtraBoldObl.woff2') format('woff2'),
+         url('FuturaPT-ExtraBoldObl.woff') format('woff'),
+         url('FuturaPT-ExtraBoldObl.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
