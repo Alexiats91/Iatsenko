@@ -11,7 +11,27 @@ function clock (){
 	document.querySelector('#hours').innerText = hour;
 	document.querySelector('#minutes').innerText = minute;
 	document.querySelector('#seconds').innerText = second;
-	document.querySelector('#weekdays').innerText = weekdayArr[weekDay];
+	document.querySelector('#weekDays').innerText = weekdayArr[weekDay];
 	document.querySelector('#monthsDays').innerText = `${monthArr[month]} ${day}`;
 }
 setInterval(clock, 1000);
+
+function randomInt(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor( Math.random() * (max - min + 1) ) + min;
+}
+function createAnimElem(){
+	let div = document.querySelector(".anim");
+	let span;
+	for(let i = 0; i < 30; i++){
+		span = document.createElement("span");
+		div.append(span);
+		span.style.top = `${randomInt(-90, 90)}px`;
+		span.style.right = `${randomInt(-90, 90)}px`;
+		span.style.opacity = `${Math.random()}`;
+	}
+}
+createAnimElem();
+
+

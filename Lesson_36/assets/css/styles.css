@@ -9,15 +9,65 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff url("../img/clock.png") no-repeat center;
+    background:  url("../img/clock.png") no-repeat center;
     background-size: auto 550px ;
     min-height: 600px;
     min-width: 355px;
 }
-.wrap1, .wrap2{
+.clockFace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/clockFace.png") center ;
+    background-size: 296px auto ;
+    height: 296px;
+    width: 296px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 25px;
+}
+.anim {
+    display: flex;
+    justify-content: center;
+    color: red;
+    align-items: center;
+    position: relative;
+    position: absolute;
+}
+span{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+span:nth-child(odd) {
+    animation: animat 6s ease infinite;
+}
+span:nth-child(even) {
+    animation: animat 4s ease infinite;
+}
+span:nth-child(3n+0) {
+    animation: animat 10s ease infinite;
+}
+@keyframes animat {
+    0%{
+        background-color: rgba(1, 86, 57, 0);
+    }
+    50% {
+        background-color: rgba(1, 86, 57, 0.9);
+        transform: scale(1.5);
+    }
+    100% {
+        background-color: rgba(1, 86, 57, 0.2);
+    }
+}
+.wrap1,
+.wrap2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 9999;
 }
 .wrap2{
     align-items: flex-start;
@@ -40,17 +90,17 @@
     font-size: 30px;
     letter-spacing: 0;
 }
-.wd, .md{
+.weekDays, .monthsDays{
     font-size: 18px;
     font-family: 'FuturaPTMediumOblique';
     line-height: 1;
 }
-.wd{
+.weekDays{
     padding-left: 5px;
     padding-top: 35px;
     color: rgb(0, 255, 85);
 }
-.md {
+.monthsDays {
     padding-left: 10px;
     padding-bottom: 15px;
     color: rgb(255, 255, 255);
