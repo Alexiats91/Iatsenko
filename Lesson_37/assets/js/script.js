@@ -1,31 +1,33 @@
 let form = document.querySelector('form');
-form.addEventListener("submit", checkTelPattern);
-form.addEventListener("submit", checkEmailPattern);
-function checkTelPattern(event){
-	let telInput = document.querySelector('#tel');
-	let validInput = document.querySelector('#validTelInput');
-	let userTel = telInput.value;
-	let telPattern = /\+\d{2}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/g;
-	let valid = telPattern.test(userTel);
+form.addEventListener("submit", setInvalidTelStyles);
+form.addEventListener("submit", setInvalidEmailStyles);
 
-	if(!valid){
+function validation(input, regExp){
+	let userValue = input.value;
+	return regExp.test( userValue );
+}
+
+function setInvalidTelStyles(event){
+	let invalidInput = document.querySelector('#invalidTelInput');
+	if(!validation(telInput, telPattern)){
 		event.preventDefault();
-		validInput.innerHTML = ' Некоректний номер';
-		validInput.style.color = 'red';
-		telInput.style.border = '1px solid red';
+		invalidInput.innerHTML = ' Некоректний номер';
+		invalidInput.style.color = 'red';
+		telInput.style.boxShadow = '0px 0px 20px 0px rgba(222,13,13,0.75)';
 	}
 }
-function checkEmailPattern(event){
-	let emailInput = document.querySelector('#email');
-	let validInput = document.querySelector('#validEmailInput');
-	let userEmail = emailInput.value;
-	let emailPattern = /^[a-z0-9]\w*@\w*\.\w{2,6}$/i;
-	let valid = emailPattern.test(userEmail);
 
-	if(!valid){
+function setInvalidEmailStyles(event){
+	let invalidInput = document.querySelector('#invalidEmailInput');
+	if(!validation(emailInput, emailPattern)){
 		event.preventDefault();
-		validInput.innerHTML = 'Некоректний Email';
-		validInput.style.color = 'red';
-		emailInput.style.border = '1px solid red';
+		invalidInput.innerHTML = 'Некоректний Email';
+		invalidInput.style.color = 'red';
+		emailInput.style.boxShadow = '0px 0px 20px 0px rgba(222,13,13,0.75)';
 	}
 }
+
+let telInput = document.querySelector('#tel');
+let emailInput = document.querySelector('#email');
+let telPattern = /\+\d{2}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/g;
+let emailPattern = /^[a-z0-9]\w*@\w*\.\w{2,6}$/i;

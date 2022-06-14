@@ -15,6 +15,11 @@
 form{
     max-width: 400px;
     margin: 20px auto;
+    border: none;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 legend{
     font-weight: bold;
@@ -23,10 +28,7 @@ legend{
 fieldset{
     margin: 5px;
     padding: 5px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 2px solid;
+    border: none;
 }
 label{
     display: flex;
@@ -36,17 +38,46 @@ input{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    border: 1px solid;
+    border: none;
     padding: 5px;
     width: 100%;
     min-width: 150px;
     height: 30px;
+
+    box-shadow: 0 0 20px 0 rgba(153,153,153,0.75);
+    -webkit-box-shadow: 0 0 20px 0 rgba(153,153,153,0.75);
+    -moz-box-shadow: 0 0 20px 0 rgba(153,153,153,0.75);
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 20px 0 rgba(13,222,97,0.75);
+    -webkit-box-shadow: 0 0 20px 0 rgba(13,222,97,0.75);
+    -moz-box-shadow: 0 0 20px 0 rgba(13,222,97,0.75);
+}
+input:hover{
+    border: none;
 }
 button{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    border: 1px solid;
+    border: none;
+
+    margin: 15px 0 0;
     width: 100%;
     height: 30px;
+
+    box-shadow: 0 0 20px 0 rgba(153,153,153,0.75);
+    -webkit-box-shadow: 0 0 20px 0 rgba(153,153,153,0.75);
+    -moz-box-shadow: 0 0 20px 0 rgba(153,153,153,0.75);
+}
+button:hover{
+    box-shadow: 0 0 20px 0 rgba(13,222,97,0.75);
+    -webkit-box-shadow: 0 0 20px 0 rgba(13,222,97,0.75);
+    -moz-box-shadow: 0 0 20px 0 rgba(13,222,97,0.75);
+}
+button:active {
+    box-shadow: 0 0 20px 0 rgba(1, 230, 79, 0.75) inset;
+    -webkit-box-shadow: 0 0 20px 0 rgba(1, 230, 79, 0.75) inset;
+    -moz-box-shadow: 0 0 20px 0 rgba(1, 230, 79, 0.75) inset;
 }
