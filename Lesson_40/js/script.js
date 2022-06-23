@@ -23,9 +23,9 @@ let currSymbol = '';
 //Функція розраховуе ціни по курсу валют.
 //currency - об'єкт з валютами
 //pricesOutArr - масив, куди будуть виводитись значення,
-function calcForeignCurr(currency, pricesOutArr){
+function calcForeignCurr(currency, pricesOutArr, fixedPricesArr){
 	for(let i = 0; i < pricesOutArr.length; i++) {
-		let price = Number( pricesOutArr[i].innerHTML) / Number( currency[currElem].sale );
+		let price = Number( fixedPricesArr[i]) / Number( currency[currElem].sale );
 		pricesOutArr[i].innerText = `${price.toFixed( 2 )}`;
 		pricesOutArr[i].nextElementSibling.innerText = currSymbol;
 	}
@@ -50,13 +50,13 @@ function changeCurrency(currency){
 	}else if(selectedCurrency.innerText === 'USD'){
 		currElem = 0;
 		currSymbol = '$';
-		calcForeignCurr(currency, newPrices);
-		calcForeignCurr(currency, oldPrices);
+		calcForeignCurr(currency, newPrices, fixedNewNativePrices);
+		calcForeignCurr(currency, oldPrices, fixedOldNativePrices);
 	}else if(selectedCurrency.innerText === 'EUR'){
 		currElem = 1;
 		currSymbol = '€';
-		calcForeignCurr(currency, newPrices);
-		calcForeignCurr(currency, oldPrices);
+		calcForeignCurr(currency, newPrices, fixedNewNativePrices);
+		calcForeignCurr(currency, oldPrices, fixedOldNativePrices);
 	}
 }
 
